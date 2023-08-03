@@ -6,9 +6,10 @@ void swap(int *a, int *b)
     *a = *b;
     *b = temp;
 }
-int main(int argc, char const *argv[])
+int main()
 {
     int a = 10, b = 20;
+    //地址传递
     swap(&a, &b);
     cout << "a=" << a << endl;
     cout << "b=" << b << endl;

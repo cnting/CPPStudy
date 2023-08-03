@@ -4,6 +4,8 @@ int main(int argc, char const *argv[])
 {
     int arr[10] = {1, 2, 3, 4, 5, 6, 7,8,9,10};
     cout << "第一个元素为:" << arr[0] << endl;
+
+    //arr就是数组首地址
     int *p = arr;
     cout << "利用指针访问第一个元素:" << *p << endl;
 
