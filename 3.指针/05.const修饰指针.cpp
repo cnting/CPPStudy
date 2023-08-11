@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    // 1. const修饰指针--常量指针
+    // 1. const修饰指针--常量指针（记住前两个字：常量不能改）
     int a = 10;
     int b = 10;
     const int *p = &a;
@@ -11,7 +11,7 @@ int main()
     //*p = 20;  //错误
     p = &b;
 
-    // 2. const修饰常量--指针常量
+    // 2. const修饰常量--指针常量（记住前两个字：指针不能改）
     //指针的指向不可以改，指针指向的值可以改
     int *const p2 = &a;
     *p2 = 200;
