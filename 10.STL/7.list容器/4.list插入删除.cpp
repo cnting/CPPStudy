@@ -45,6 +45,10 @@ void test1() {
     l1.push_back(10000);
     l1.remove(10000);
     print(l1);
+
+    //在尾部插入1
+    l1.back() = 1;
+    print(l1);
 }
 
 

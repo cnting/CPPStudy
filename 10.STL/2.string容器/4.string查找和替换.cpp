@@ -23,7 +23,17 @@ void test2() {
 
 }
 
+//大小写转换
+void test3() {
+    string str1 = "abcdefg";
+    transform(str1.begin(), str1.end(), str1.begin(), ::toupper);
+    cout << str1 << endl;
+    transform(str1.begin(), str1.end(), str1.begin(), ::tolower);
+    cout << str1 << endl;
+}
+
 int main() {
-    test1();
-    test2();
+//    test1();
+//    test2();
+    test3();
 }

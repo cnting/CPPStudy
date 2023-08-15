@@ -36,7 +36,7 @@ void test1() {
     cout << p2.age << endl;
 }
 
-//2.值传递的方式给函数参数传值
+//2.值传递的方式给函数参数传值，会创建一个新对象
 void doWork(Person p) {
 
 }

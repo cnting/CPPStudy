@@ -28,6 +28,20 @@ void test() {
     }
 }
 
+/**
+ * 优先级队列
+ */
+void test2() {
+    priority_queue<int, vector<int>, greater<int>> q;
+    q.push(12);
+    q.push(44);
+    q.push(33);
+    q.push(10);
+    q.push(50);
+    cout << q.top() << endl;
+}
+
 int main() {
-    test();
+//    test();
+    test2();
 }

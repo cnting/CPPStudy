@@ -18,11 +18,13 @@ void test1() {
     l1.push_back(40);
     print(l1);
 
-    list<int> l2(l2.begin(), l2.end());
+    list<int> l2(l1.begin(), l1.end());
 
     list<int> l3(l2);
 
     list<int> l4(10, 1000);
+
+    l4.back()
 
 }
 

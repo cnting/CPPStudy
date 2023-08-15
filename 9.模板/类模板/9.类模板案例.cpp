@@ -3,6 +3,7 @@
 using namespace std;
 
 #include "MyArray.hpp"
+#include "ArrayList.hpp"
 
 /**
  * 实现一个通用的数组类
@@ -13,6 +14,9 @@ using namespace std;
  * 5.提供尾插法和尾删法对数组中的数据进行增加和删除
  * 6.可以通过下标的方式访问数组中的元素
  * 7.可以获取数组中当前元素个数和数组的容量
+ *
+ *
+ * 注意：如果使用了模板类，声明和实现必须写在一个文件中，所以这里搞成hpp
  */
 
 void printArray(MyArray<int> &arr) {
@@ -87,9 +91,29 @@ void test2() {
     cout << "arr的容量:" << arr.getCapacity() << endl;
     cout << "arr的大小:" << arr.getSize() << endl;
 }
+/**
+ * 包含扩容机制
+ */
+void test3() {
+    ArrayList<int> list;
+    for (int i = 0; i < 100; i++) {
+        list.add(i);
+    }
+    //测试拷贝构造
+    ArrayList<int> list2 = list;
+
+    for (int i = 0; i < list2.size(); i++) {
+        cout << list2.get(i) << endl;
+    }
+
+    cout << "删除一个数后：" << endl;
+    cout << "被删除的数：" << list.remove(50) << endl;
+    cout << "总长度：" << list.size();
+}
 
 int main(int argc, char const *argv[]) {
 //    test1();
-    test2();
+//    test2();
+    test3();
     return 0;
 }

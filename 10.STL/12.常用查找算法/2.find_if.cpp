@@ -65,7 +65,25 @@ void test2() {
     }
 }
 
+void test3() {
+    vector<string> v;
+    v.push_back("aaa");
+    v.push_back("bbb");
+    v.push_back("ccc");
+    v.push_back("ddd");
+
+    //bind2nd()表示固定第二个参数
+    //aaa相当于equal_to中的right，将集合中的所有元素都跟aaa比较
+    vector<string>::iterator it = find_if(v.begin(), v.end(), bind2nd(equal_to<string>(), "aaa"));
+    if (it == v.end()) {
+        cout << "不存在" << endl;
+    } else {
+        cout << "存在 " << *it << endl;
+    }
+}
+
 int main() {
 //    test1();
-    test2();
+//    test2();
+    test3();
 }

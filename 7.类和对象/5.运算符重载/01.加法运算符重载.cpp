@@ -5,7 +5,7 @@ using namespace std;
 class Person {
 public:
     //1.成员函数重载+号
-//    Person operator+(Person &p) {
+//    Person operator+(const Person &p) {
 //        Person temp;
 //        temp.m_A = this->m_A + p.m_A;
 //        temp.m_B = this->m_B + p.m_B;

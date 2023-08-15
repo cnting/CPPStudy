@@ -11,6 +11,12 @@ public:
         this->m_Age = age;
     }
 
+    Person(const Person &p) {
+        this->m_Name = p.m_Name;
+        this->m_Age = p.m_Age;
+        cout << "Person拷贝构造"<<endl;
+    }
+
     string m_Name;
     int m_Age;
 };
@@ -53,7 +59,21 @@ void test2() {
     }
 }
 
+void test3() {
+    vector<Person> v;
+    Person p1 = Person("aaa", 10);
+    v.push_back(p1);  //会调用p1的拷贝构造函数
+
+    //改变了p1的属性，不会影响到vector里的内容
+    p1.m_Name = "bbb";
+    for (vector<Person>::iterator it = v.begin(); it < v.end(); it++) {
+        cout << "s姓名：" << it->m_Name << ",年龄：" << it->m_Age << endl;
+    }
+
+}
+
 int main() {
-    test1();
-    test2();
+//    test1();
+//    test2();
+    test3();
 }
