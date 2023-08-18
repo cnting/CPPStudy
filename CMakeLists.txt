@@ -3,7 +3,7 @@ project(CPPStudy)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CPPStudy 10.STL/12.常用查找算法/2.find_if.cpp)
+add_executable(CPPStudy 15.算法/algo.cpp )
 
 #add_executable(CPPStudy 11.演讲比赛流程管理系统/演讲比赛流程管理系统.cpp 11.演讲比赛流程管理系统/speechManager.cpp 11.演讲比赛流程管理系统/speechManager.h 11.演讲比赛流程管理系统/speaker.h)
 
