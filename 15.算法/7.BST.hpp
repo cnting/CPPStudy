@@ -19,8 +19,8 @@ public:
     TreeNode(TreeNode<K, V> *pNode) {
         this->left = pNode->left;
         this->right = pNode->right;
-        this->key = key;
-        this->value = value;
+        this->key = pNode->key;
+        this->value = pNode->value;
     }
 };
 

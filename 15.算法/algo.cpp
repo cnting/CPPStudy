@@ -7,6 +7,8 @@
 #include "6.ArrayQueue.hpp"
 #include "7.BST.hpp"
 #include "8.PriorityQueue.hpp"
+#include "9.AVL.hpp"
+#include "10.RBTree.hpp"
 #include "ArrayUtil.cpp"
 #include "stack"
 
@@ -208,10 +210,82 @@ void test10() {
     cout << endl;
     cout << bst->get(8) << endl;
 
+    delete bst;
+}
+
+void test11() {
+    AVL<int, int> *avl = new AVL<int, int>();
+    avl->put(3, 3);
+    avl->put(1, 1);
+    avl->put(2, 2);
+    avl->put(4, 4);
+    avl->put(5, 5);
+    avl->put(6, 6);
+    avl->put(7, 7);
+    avl->put(10, 10);
+    avl->put(9, 9);
+    avl->put(8, 8);
+
+    avl->levelTraverse(visit);
+    cout << "个数:" << avl->size() << endl;
+    cout << endl;
+
+    avl->remove(4);
+    avl->remove(5);
+    avl->levelTraverse(visit);
+    cout << "个数:" << avl->size() << endl;
+
+    delete avl;
+}
+
+void rbvisit(int key, bool isRed) {
+    if (isRed) {
+        cout << "key:" << key << " 红" << endl;
+    } else {
+        cout << "key:" << key << " 黑" << endl;
+    }
+}
+
+void test12() {
+    RBTree<int, int> *tree = new RBTree<int, int>();
+    tree->insert(3, 3);
+    tree->insert(2, 2);
+    tree->insert(1, 1);
+    tree->insert(4, 4);
+    tree->insert(5, 5);
+    tree->insert(-5, -5);
+    tree->insert(-15, -15);
+    tree->insert(-10, -10);
+    tree->insert(6, 6);
+    tree->insert(7, 7);
+    tree->rbLevelTraverse(rbvisit);
+
+    cout << endl;
+    tree->remove(2);
+    tree->rbLevelTraverse(rbvisit);
+
+    delete tree;
+}
+
+void test13() {
+    int a = -1;
+    unsigned int b = 4294967295;
+    bitset<32> c(a);
+    bitset<32> d(b);
+    cout << c << endl;  //11111111111111111111111111111111
+    cout << d << endl;  //11111111111111111111111111111111
+
+    cout << (b + 1) << endl;  //0
+
+    int e = 0b11111111111111111111111111111111;
+    cout << e + 1 << endl;  //0
+
+    unsigned int f = 0b11111111111111111111111111111111;
+    cout << f + 1 << endl;  //0
 }
 
 int main() {
-    test10();
+    test12();
 
     return 0;
 }
