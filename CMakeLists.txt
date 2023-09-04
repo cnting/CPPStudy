@@ -3,7 +3,7 @@ project(CPPStudy)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CPPStudy 0.数据类型/3.inline和define.cpp)
+add_executable(CPPStudy 16.Linux/thread1.cpp)
 
 #add_executable(CPPStudy 11.演讲比赛流程管理系统/演讲比赛流程管理系统.cpp 11.演讲比赛流程管理系统/speechManager.cpp 11.演讲比赛流程管理系统/speechManager.h 11.演讲比赛流程管理系统/speaker.h)
 
