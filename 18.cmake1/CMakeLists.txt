@@ -1,0 +1,28 @@
+#指定CMake最低编译版本
+CMAKE_MINIMUM_REQUIRED(VERSION 3.14)
+
+#给工程取一个名字
+PROJECT (MATH)
+
+#方式一：搜集src目录下所有.cpp文件，放到SRC_LIST集合中
+#AUX_SOURCE_DIRECTORY(${PROJECT_SOURCE_DIR}/src SRC_LIST)
+
+#方式二：
+FILE(GLOB SRC_LIST_CPP "${PROJECT_SOURCE_DIR}/src/*.cpp" )
+FILE(GLOB SRC_LIST_C "${PROJECT_SOURCE_DIR}/src/*.c" )
+
+#指定头文件在哪个目录
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
+
+#指定 so 的生成目录
+SET (LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+
+#指定生成静态库
+#ADD_LIBRARY(math ${SRC_LIST_CPP} ${SRC_LIST_C})
+ADD_LIBRARY(math SHARED ${SRC_LIST_CPP} ${SRC_LIST_C})
+
+#打印
+#MESSAGE(STATUS "src_list":${SRC_LIST})
+
+
+

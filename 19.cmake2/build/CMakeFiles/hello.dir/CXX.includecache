@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/add.h
+
+../include/div.h
+
+../include/multi.h
+
+../include/sub.h
+
+/Users/cnting/Downloads/cmake2/hello.cpp
+stdio.h
+-
+add.h
+/Users/cnting/Downloads/cmake2/add.h
+sub.h
+/Users/cnting/Downloads/cmake2/sub.h
+div.h
+/Users/cnting/Downloads/cmake2/div.h
+multi.h
+/Users/cnting/Downloads/cmake2/multi.h
+
